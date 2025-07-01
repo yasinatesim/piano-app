@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>88-Key Piano</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="piano-container">
+        <h1 class="piano-title">🎹 88-Key Piano</h1>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Volume</label>
+                <input type="range" id="volume" min="0" max="100" value="50">
+            </div>
+            <div class="control-group">
+                <label>Reverb</label>
+                <input type="range" id="reverb" min="0" max="100" value="20">
+            </div>
+            <div class="control-group">
+                <label>Octave</label>
+                <input type="range" id="octave" min="-2" max="2" value="0">
+            </div>
+        </div>
+
+        <div class="piano" id="piano">
+        </div>
+
+        <div class="octave-indicator">
+            Octave Shift: <span id="octave-display">0</span> | Sustain Pedal: Hold the <strong>Space</strong> key
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
