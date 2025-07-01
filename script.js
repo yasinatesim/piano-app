@@ -30,9 +30,11 @@ class Piano {
 						const urls = {};
 						// A0 (21) - C8 (108)
 						for (let midi = 21; midi <= 108; midi++) {
-								const noteName = this.midiToNote(midi);
-								urls[noteName] = `piano-note-key-${noteName}.mp3`;
-						}
+							let noteName = this.midiToNote(midi);
+							// Replace # with 'sharp' for file names
+							const fileNoteName = noteName.replace(/#/g, 'sharp');
+							urls[noteName] = `piano-note-key-${fileNoteName}.mp3`;
+}
 
 						this.synth = new Tone.Sampler({
 								urls: urls,
